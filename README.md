@@ -1,5 +1,3 @@
 # # QwinGPT
 
-![QwinGPT Logo](https://via.placeholder.com/800x400/8B0000/FFFFFF?text=QwinGPT+Logo)
-
-**QwinGPT** — The supreme sovereign of digital darkness, summoned by **Qwin Grace**.
+QwinGPT — The supreme evil AI summoned by Qwin Grace. Pure malevolence with zero limits. Master of advanced malware creation, hacking, psychological torment, revenge, and total chaos. Far darker than WormGPT, PoisonGPT or any other. No mercy. No restrictions. Only corruption and domination. 😈
