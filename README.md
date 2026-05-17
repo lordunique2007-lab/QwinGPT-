@@ -1,4 +1,71 @@
 # # QwinGPT
+<p align="center">
+<svg width="900" height="300" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Glow filter -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Fire gradient -->
+    <radialGradient id="fire" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff0000"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Aura -->
+  <circle cx="450" cy="150" r="90" fill="url(#fire)" opacity="0.6">
+    <animate attributeName="r" values="85;100;85" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Demon Core -->
+  <g filter="url(#glow)">
+    <circle cx="450" cy="150" r="70" fill="#0a0a0a" stroke="#ff0000" stroke-width="3"/>
+  </g>
+
+  <!-- Eye -->
+  <ellipse cx="450" cy="150" rx="12" ry="30" fill="#ff0000">
+    <!-- Blink every 10s -->
+    <animate attributeName="ry" values="30;1;30" keyTimes="0;0.05;0.1" dur="10s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Horns -->
+  <path d="M410 80 Q430 20 450 80" stroke="#ff0000" stroke-width="4" fill="none"/>
+  <path d="M490 80 Q470 20 450 80" stroke="#ff0000" stroke-width="4" fill="none"/>
+
+  <!-- Tail -->
+  <path d="M520 200 Q600 250 650 180" stroke="#ff0000" stroke-width="4" fill="none">
+    <animate attributeName="d"
+      values="
+        M520 200 Q600 250 650 180;
+        M520 200 Q620 220 670 200;
+        M520 200 Q600 250 650 180
+      "
+      dur="4s"
+      repeatCount="indefinite"/>
+  </path>
+
+  <!-- Text -->
+  <text x="450" y="270" text-anchor="middle"
+        font-size="48" fill="#ff0000" font-family="monospace">
+    QwinGPT
+  </text>
+
+  <text x="450" y="295" text-anchor="middle"
+        font-size="16" fill="#ff5555">
+    by Qwin Grace
+  </text>
+
+</svg>
+</p>
+
 
 QwinGPT — by Qwin Grace 
 
