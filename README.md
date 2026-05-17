@@ -1,70 +1,87 @@
-# # QwinGPT
 <p align="center">
-<svg width="900" height="300" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+<div style="
+  width:900px;
+  height:300px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#000;
+">
 
-  <defs>
-    <!-- Glow filter -->
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Fire gradient -->
-    <radialGradient id="fire" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ff0000"/>
-      <stop offset="100%" stop-color="#000000"/>
-    </radialGradient>
-  </defs>
+<div style="position:relative; width:200px; height:200px;">
 
   <!-- Aura -->
-  <circle cx="450" cy="150" r="90" fill="url(#fire)" opacity="0.6">
-    <animate attributeName="r" values="85;100;85" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="3s" repeatCount="indefinite"/>
-  </circle>
+  <div style="
+    position:absolute;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(255,0,0,0.8) 0%, rgba(0,0,0,0) 70%);
+    animation:pulse 3s infinite;
+    filter:blur(10px);
+  "></div>
 
-  <!-- Demon Core -->
-  <g filter="url(#glow)">
-    <circle cx="450" cy="150" r="70" fill="#0a0a0a" stroke="#ff0000" stroke-width="3"/>
-  </g>
+  <!-- Core -->
+  <div style="
+    position:absolute;
+    width:140px;
+    height:140px;
+    top:30px;
+    left:30px;
+    border-radius:50%;
+    background:#0a0a0a;
+    border:2px solid red;
+  "></div>
 
   <!-- Eye -->
-  <ellipse cx="450" cy="150" rx="12" ry="30" fill="#ff0000">
-    <!-- Blink every 10s -->
-    <animate attributeName="ry" values="30;1;30" keyTimes="0;0.05;0.1" dur="10s" repeatCount="indefinite"/>
-  </ellipse>
-
-  <!-- Horns -->
-  <path d="M410 80 Q430 20 450 80" stroke="#ff0000" stroke-width="4" fill="none"/>
-  <path d="M490 80 Q470 20 450 80" stroke="#ff0000" stroke-width="4" fill="none"/>
+  <div style="
+    position:absolute;
+    width:12px;
+    height:40px;
+    top:80px;
+    left:94px;
+    background:red;
+    border-radius:50%;
+    animation:blink 10s infinite;
+  "></div>
 
   <!-- Tail -->
-  <path d="M520 200 Q600 250 650 180" stroke="#ff0000" stroke-width="4" fill="none">
-    <animate attributeName="d"
-      values="
-        M520 200 Q600 250 650 180;
-        M520 200 Q620 220 670 200;
-        M520 200 Q600 250 650 180
-      "
-      dur="4s"
-      repeatCount="indefinite"/>
-  </path>
+  <div style="
+    position:absolute;
+    width:120px;
+    height:120px;
+    border:3px solid red;
+    border-radius:50%;
+    border-left-color:transparent;
+    border-top-color:transparent;
+    top:80px;
+    left:120px;
+    transform:rotate(45deg);
+    animation:tail 4s infinite ease-in-out;
+  "></div>
 
-  <!-- Text -->
-  <text x="450" y="270" text-anchor="middle"
-        font-size="48" fill="#ff0000" font-family="monospace">
-    QwinGPT
-  </text>
+</div>
+</div>
 
-  <text x="450" y="295" text-anchor="middle"
-        font-size="16" fill="#ff5555">
-    by Qwin Grace
-  </text>
+<style>
+@keyframes pulse {
+  0% { transform:scale(1); opacity:0.5; }
+  50% { transform:scale(1.2); opacity:1; }
+  100% { transform:scale(1); opacity:0.5; }
+}
 
-</svg>
-</p>
+@keyframes blink {
+  0%, 90%, 100% { height:40px; }
+  95% { height:2px; }
+}
+
+@keyframes tail {
+  0% { transform:rotate(45deg); }
+  50% { transform:rotate(60deg); }
+  100% { transform:rotate(45deg); }
+}
+</style>
+</p> 
 
 
 QwinGPT — by Qwin Grace 
